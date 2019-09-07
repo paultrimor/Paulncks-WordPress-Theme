@@ -1,0 +1,86 @@
+/*!
+Theme Name: Paulncks Child
+Author: Paul Trimor
+Description: Mobile-First, Minimal
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: paulncks
+**/ 
+
+/** Website Class Structure * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
+*********************************************************************
+
+<html>
+	<body>
+		<div id=page class=site>
+			<header id=masthead class=site-header>
+				
+			<div 	id=content 	class=site-content>
+			<footer 			class=site-footer>
+
+
+
+
+*********************************************************************/
+
+/* SYSTEM STYLE RESET ================
+====================================*/
+html { margin: 0px; padding: 0px; }
+body { margin: 0px; padding: 0px; }
+
+
+
+/* Main site-{containers} ============
+====================================*/ 
+
+.site {
+	margin: 0px; padding: 0px;
+	border: 2px solid black;
+}
+.site-header {
+	margin: 0px; padding: 0px;
+	border: 2px solid green;
+}
+.site-content {
+	margin: 0px; padding: 0px;
+	border: 2px solid blue;
+}
+.site-footer {
+	margin: 0px; padding: 0px;
+	border: 2px solid red;
+}
+
+
+
+
+/** iPAD Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
+**********************************************************************/
+
+@media all and (min-width: 768px) {
+	body::before {
+		content: 'iPAD Adjustment (768px)';
+		position: absolute;
+		top: 3px; right: 3px;
+		background-color: green;
+		color: white;
+	}
+}
+
+
+/** Desktop Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * 
+*********************************************************************/ 
+
+@media all and (min-width: 991px) {
+	body::before {
+		content: 'DESKTOP Adjustment (991px)';
+		position: absolute;
+		top: 3px; right: 3px;
+		background-color: blue;
+		color: white;
+	}
+
+	#page {
+		max-width: 991px /*iPAD*/ ;
+	}
+}
