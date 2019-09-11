@@ -53,6 +53,7 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 	margin: 0px; padding: 0px;
 	border: 2px solid blue;
 	flex: 90;
+	overflow: scroll;
 }
 .site-footer {
 	margin: 0px; padding: 0px;
@@ -69,6 +70,12 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 .menu {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-evenly; 
+	list-style: none;
+	padding: 0px;
+}
+.site-header > .site-branding {
+	display: flex;
 }
 .site-footer > .site-branding {
 	display: none;	
@@ -111,6 +118,10 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 		background-color: blue;
 		color: white;
 	}
+
+	/* Main site-{containers} ============
+	====================================*/ 
+	
 	#page {
 		flex-direction: row;
 		max-width: 991px /*iPAD*/ ;
@@ -119,21 +130,26 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 		width: 90%;
 	}
 	.site-footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		width: 20%;
 	}
 	.site-header 	{
 		flex-grow: 1;
 	}
-	.site-header .bloginfo {
-		writing-mode: vertical-rl;
-	}
-
+	
 
 	/* Menu & Branding ===================
 	====================================*/
 
 	.menu {
 		flex-direction: column;
+	}
+	.site-header .bloginfo {
+		writing-mode: vertical-rl;
+		height: 100%;
+
 	}
 	.site-header > .site-branding {
 		display: none;
