@@ -15,21 +15,25 @@ Text Domain: paulncks
 	<body>
 		<div id=page class=site>
 			<header id=masthead class=site-header>
-				
 			<div 	id=content 	class=site-content>
+				<div id=primary class=content-area> 
+
 			<footer 			class=site-footer>
 
+Menu: 
+	<div class=menu-{menu name}-container>
+		<ul id=menu-{menu name} class=menu>
+			<li class=menu-item>
 
 
 
-*********************************************************************/
+/** Mobile-First  * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
+**********************************************************************/
 
 /* SYSTEM STYLE RESET ================
 ====================================*/
-html { margin: 0px; padding: 0px; }
-body { margin: 0px; padding: 0px; }
 
-
+html, body { margin: 0px; padding: 0px; height: 100%; }
 
 /* Main site-{containers} ============
 ====================================*/ 
@@ -37,6 +41,9 @@ body { margin: 0px; padding: 0px; }
 .site {
 	margin: 0px; padding: 0px;
 	border: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 .site-header {
 	margin: 0px; padding: 0px;
@@ -45,13 +52,38 @@ body { margin: 0px; padding: 0px; }
 .site-content {
 	margin: 0px; padding: 0px;
 	border: 2px solid blue;
+	flex: 90;
 }
 .site-footer {
 	margin: 0px; padding: 0px;
 	border: 2px solid red;
+	flex: 5;
+}
+#primary {
+	border: 2px solid black;
 }
 
+/* Menu & Branding ===================
+====================================*/
 
+.menu {
+	display: flex;
+	flex-direction: row;
+}
+.site-footer > .site-branding {
+	display: none;	
+}
+
+/* Site Branding =====================
+====================================*/
+
+.bloginfo {
+	display: block;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
 
 
 /** iPAD Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
@@ -79,8 +111,35 @@ body { margin: 0px; padding: 0px; }
 		background-color: blue;
 		color: white;
 	}
-
 	#page {
+		flex-direction: row;
 		max-width: 991px /*iPAD*/ ;
 	}
+	.site-content {
+		width: 90%;
+	}
+	.site-footer {
+		width: 20%;
+	}
+	.site-header 	{
+		flex-grow: 1;
+	}
+	.site-header .bloginfo {
+		writing-mode: vertical-rl;
+	}
+
+
+	/* Menu & Branding ===================
+	====================================*/
+
+	.menu {
+		flex-direction: column;
+	}
+	.site-header > .site-branding {
+		display: none;
+	}
+	.site-footer > .site-branding {
+		display: block;
+	}
+
 }

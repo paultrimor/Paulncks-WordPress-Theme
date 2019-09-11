@@ -1,6 +1,14 @@
 		</div><!-- #content --> 
 		<footer class="site-footer">
-			<div class="site-info">site info section</div>
+
+			<?php 
+				wp_nav_menu(array(
+					'theme_location' 	=> 'menu-main'
+				));
+			?>	
+
+			<?php get_template_part('template-parts/site-branding'); ?>
+		
 		</footer>
 	</div><!-- #page -->
 	<?php wp_footer(); ?>

@@ -8,7 +8,9 @@
 					<?php the_archive_title(); the_archive_description(); ?> 
 
 					<?php while( have_posts() ) : the_post(); ?>
-						
+
+						<?php the_excerpt(); ?>
+						<hr>
 					<?php endwhile; ?>
 				</header>
 			<?php endif ?>

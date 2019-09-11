@@ -8,16 +8,7 @@
 <body>
 	<div id="page" class="site">
 		<header id="masthead" class="site-header">
-
-			<?php 
-				wp_nav_menu(array(
-					'theme_location' => 'menu-main'
-				));
-			?>	
-
-			<div class="site-branding">
-				<span class="bloginfo"><?php echo get_bloginfo('description');?> </span> 
-			</div>
+			<?php get_template_part('template-parts/site-branding'); ?>
+			<span class="bloginfo"><?php echo get_bloginfo('description');?> </span> 
 		</header>
-
 		<div id="content" class="site-content">
