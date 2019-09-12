@@ -14,12 +14,12 @@ Text Domain: paulncks
 <html>
 	<body>
 		<div id=page class=site>
-			<header id=masthead class=site-header>
-			<div 	id=content 	class=site-content>
-				<div id=primary class=content-area> 
-
-			<footer 			class=site-footer>
-
+			<header  id=masthead class=site-header>
+				<div id=header   class=header-area>
+			<div 	 id=content	 class=site-content>
+				<div id=primary  class=content-area> 
+			<footer 			 class=site-footer>
+				<div id=footer   class=footer-area>
 Menu: 
 	<div class=menu-{menu name}-container>
 		<ul id=menu-{menu name} class=menu>
@@ -34,34 +34,49 @@ Menu:
 ====================================*/
 
 html, body { margin: 0px; padding: 0px; height: 100%; }
+* { box-sizing: border-box; }
 
 /* Main site-{containers} ============
 ====================================*/ 
 
 .site {
-	margin: 0px; padding: 0px;
-	border: 2px solid black;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	margin: 0px; padding: 0px;
+	border: 2px solid black;
 }
 .site-header {
+	flex: 1;
 	margin: 0px; padding: 0px;
 	border: 2px solid green;
 }
 .site-content {
+	flex:10;
 	margin: 0px; padding: 0px;
 	border: 2px solid blue;
-	flex: 90;
 	overflow: scroll;
 }
 .site-footer {
+	flex: 1;
 	margin: 0px; padding: 0px;
 	border: 2px solid red;
-	flex: 5;
 }
 #primary {
 	border: 2px solid black;
+}
+
+/* 2nd Level Areas ===================
+====================================*/
+
+.header-area {
+	padding: 5px 10px;
+}
+.content-area {
+	padding: 5px 10px;
+}
+.footer-area {
+	padding: 5px;
 }
 
 /* Menu & Branding ===================
@@ -70,28 +85,33 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 .menu {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly; 
+	justify-content: space-around; 
 	list-style: none;
 	padding: 0px;
 }
-.site-header > .site-branding {
+.header-area > .site-branding {
 	display: flex;
 }
-.site-footer > .site-branding {
+.footer-area > .site-branding {
 	display: none;	
 }
-
-/* Site Branding =====================
-====================================*/
-
+.custom-logo {
+	width: 80px;
+	height: 80px;
+	vertical-align: middle;
+}
+.site-info {
+	margin: 0px;
+	padding: 5px 10px;
+}
 .bloginfo {
 	display: block;
 	width: 100%;
+	padding: 0px 5px;
 	background-color: black;
 	color: white;
 	text-align: center;
 }
-
 
 /** iPAD Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
 **********************************************************************/
@@ -125,37 +145,58 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 	#page {
 		flex-direction: row;
 		max-width: 991px /*iPAD*/ ;
+		max-height: 800px;
+		margin: auto;
+	}
+	.site-header {
+		flex: 1;
 	}
 	.site-content {
+		flex: 30;
 		width: 90%;
 	}
 	.site-footer {
+		flex: 8;
+	}
+
+	/* 2nd Level Areas ===================
+	====================================*/
+	.header-area {
+		display: none;
+	}
+	.content-area {
+		padding: 15px 20px;
+	}
+	.footer-area {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		width: 20%;
-	}
-	.site-header 	{
-		flex-grow: 1;
+		height: 100%;
 	}
 	
-
 	/* Menu & Branding ===================
 	====================================*/
-
-	.menu {
-		flex-direction: column;
-	}
 	.site-header .bloginfo {
 		writing-mode: vertical-rl;
 		height: 100%;
-
 	}
-	.site-header > .site-branding {
+	.menu {
+		flex-direction: column;
+		height: 100%; 
+	}
+	.menu-item {
+		display: block;
+		margin-top: 15px;
+	}
+	.header-area > .site-branding {
 		display: none;
 	}
-	.site-footer > .site-branding {
+	.footer-area > .site-branding {
 		display: block;
+	}
+	.site-branding img {
+		display: block;
+		margin: auto;
 	}
 
 }

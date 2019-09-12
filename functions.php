@@ -11,6 +11,7 @@ function register_menus() {
 
 function paulncks_scripts() {
 	wp_enqueue_style('paulncks-style', get_stylesheet_uri()); 
+	wp_enqueue_script('script', get_template_directory_uri() . '/scripts/functions.js');
 }
 
 add_action('init', 'register_menus');
