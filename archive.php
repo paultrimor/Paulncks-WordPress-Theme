@@ -4,15 +4,17 @@
 			<h2>Blog Page</h2>
 
 			<?php if (have_posts()): ?>
-				<header class="page-header">
-					<?php the_archive_title(); the_archive_description(); ?> 
+				<?php the_archive_title(); the_archive_description(); ?> 
 
-					<?php while( have_posts() ) : the_post(); ?>
+				<?php while( have_posts() ) : the_post(); ?>
+					<div class="post-preview">
+						<h3><?php the_title(); ?></h3>
 
 						<?php the_excerpt(); ?>
-						<hr>
-					<?php endwhile; ?>
-				</header>
+
+						<a class="read-more" href="<?php echo the_permalink(); ?>">Read More</a>
+					</div>
+				<?php endwhile; ?>
 			<?php endif ?>
 
 		</main>

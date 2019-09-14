@@ -18,6 +18,7 @@ Text Domain: paulncks
 				<div id=header   class=header-area>
 			<div 	 id=content	 class=site-content>
 				<div id=primary  class=content-area> 
+					*<div 		 class=post-preview>
 			<footer 			 class=site-footer>
 				<div id=footer   class=footer-area>
 Menu: 
@@ -25,9 +26,7 @@ Menu:
 		<ul id=menu-{menu name} class=menu>
 			<li class=menu-item>
 
-
-
-/** Mobile-First  * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
+/** Global Styles * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
 **********************************************************************/
 
 /* SYSTEM STYLE RESET ================
@@ -35,6 +34,18 @@ Menu:
 
 html, body { margin: 0px; padding: 0px; height: 100%; }
 * { box-sizing: border-box; }
+
+
+/* Links and Buttons ================
+====================================*/
+
+a {
+	color: red;
+}
+
+
+/** Mobile-First  * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
+**********************************************************************/
 
 /* Main site-{containers} ============
 ====================================*/ 
@@ -44,26 +55,20 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 	flex-direction: column;
 	height: 100%;
 	margin: 0px; padding: 0px;
-	border: 2px solid black;
 }
 .site-header {
 	flex: 1;
 	margin: 0px; padding: 0px;
-	border: 2px solid green;
 }
 .site-content {
 	flex:10;
 	margin: 0px; padding: 0px;
-	border: 2px solid blue;
 	overflow: scroll;
 }
 .site-footer {
 	flex: 1;
 	margin: 0px; padding: 0px;
-	border: 2px solid red;
-}
-#primary {
-	border: 2px solid black;
+	border-top: 2px solid #435360;
 }
 
 /* 2nd Level Areas ===================
@@ -108,9 +113,16 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 	display: block;
 	width: 100%;
 	padding: 0px 5px;
-	background-color: black;
+	background-color: #435360;
 	color: white;
 	text-align: center;
+}
+
+/* Post Loop =========================
+====================================*/
+
+.content-area .post-preview {
+	border-bottom: 1px solid #435360;
 }
 
 /** iPAD Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
@@ -157,10 +169,13 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 	}
 	.site-footer {
 		flex: 8;
+		border-top: none;
+		border-left: 2px solid #435360;
 	}
 
 	/* 2nd Level Areas ===================
 	====================================*/
+
 	.header-area {
 		display: none;
 	}
@@ -176,6 +191,7 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 	
 	/* Menu & Branding ===================
 	====================================*/
+	
 	.site-header .bloginfo {
 		writing-mode: vertical-rl;
 		height: 100%;
