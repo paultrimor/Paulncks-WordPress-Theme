@@ -11,6 +11,6 @@
 			<div class="header-area">			
 				<?php get_template_part('template-parts/site-branding'); ?>
 			</div>
-			<span class="bloginfo"><?php echo get_bloginfo('description');?> </span> 
+			<span class="bloginfo"><?php echo get_bloginfo('description');?></span>
 		</header>
 		<div id="content" class="site-content">

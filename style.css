@@ -35,14 +35,41 @@ Menu:
 html, body { margin: 0px; padding: 0px; height: 100%; }
 * { box-sizing: border-box; }
 
+@import 
 
 /* Links and Buttons ================
 ====================================*/
-
 a {
-	color: red;
+	text-decoration-color: #0000ee;
+}
+a:hover {
+	color: black;
 }
 
+/* Custom ScrollBar */ 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+} 
+::-webkit-scrollbar-thumb {
+  background: #435360; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+
+/* Typography =======================
+===================================*/
+
+* {
+	font-family: serif;
+}
+
+h1, h2, h3, h4, h4 {
+	font-family: sans-serif;
+}
 
 /** Mobile-First  * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
 **********************************************************************/
@@ -61,9 +88,11 @@ a {
 	margin: 0px; padding: 0px;
 }
 .site-content {
-	flex:10;
+	flex: 10;
 	margin: 0px; padding: 0px;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: 
+	overflow-wrap: break-word;
 }
 .site-footer {
 	flex: 1;
@@ -81,7 +110,7 @@ a {
 	padding: 5px 10px;
 }
 .footer-area {
-	padding: 5px;
+	padding: 5px 10px;
 }
 
 /* Menu & Branding ===================
@@ -92,6 +121,7 @@ a {
 	flex-direction: row;
 	justify-content: space-around; 
 	list-style: none;
+	font-weight: bold;
 	padding: 0px;
 }
 .header-area > .site-branding {
@@ -101,9 +131,14 @@ a {
 	display: none;	
 }
 .custom-logo {
+	display: block;
 	width: 80px;
-	height: 80px;
+	height: 100%;
 	vertical-align: middle;
+}
+.custom-logo h1 {
+	height: 100%;
+	text-align: center;
 }
 .site-info {
 	margin: 0px;
@@ -122,7 +157,17 @@ a {
 ====================================*/
 
 .content-area .post-preview {
-	border-bottom: 1px solid #435360;
+	padding: 10px 0px;
+	border-top: 2px dotted #435360;
+}
+.post-preview {
+	display: flex;
+	flex-direction: column;
+}
+.post-preview .post-image img{
+	width: 100%;
+	height: 100px;
+	object-fit: cover;
 }
 
 /** iPAD Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
@@ -180,7 +225,7 @@ a {
 		display: none;
 	}
 	.content-area {
-		padding: 15px 20px;
+		padding: 20px;
 	}
 	.footer-area {
 		display: flex;
@@ -202,7 +247,7 @@ a {
 	}
 	.menu-item {
 		display: block;
-		margin-top: 15px;
+		margin-top: 5px;
 	}
 	.header-area > .site-branding {
 		display: none;
@@ -210,9 +255,30 @@ a {
 	.footer-area > .site-branding {
 		display: block;
 	}
-	.site-branding img {
-		display: block;
-		margin: auto;
+	.custom-logo {
+		width: 80px;
+		height: auto;
+	}
+	.custom-logo h1 {
+		margin: 0px;
+	}
+
+	/* Post Loop =========================
+	====================================*/
+
+	.post-preview {
+		display: flex; 
+		flex-direction: row;
+	}
+	.post-preview .post-image img {
+		width: 150px;
+		height: 150px;
+	}
+	.post-preview .post-description {
+		padding: 0px 10px;
+	}
+	.post-preview .post-description h3 {
+		margin-top: 0px;  
 	}
 
 }

@@ -8,11 +8,16 @@
 
 				<?php while( have_posts() ) : the_post(); ?>
 					<div class="post-preview">
-						<h3><?php the_title(); ?></h3>
+						<div class="post-image">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<div class="post-description">
+							<h3><?php the_title(); ?></h3>
 
-						<?php the_excerpt(); ?>
-
-						<a class="read-more" href="<?php echo the_permalink(); ?>">Read More</a>
+							<?php the_excerpt(); ?>
+							<a class="read-more" href="<?php echo the_permalink(); ?>">Read More</a>
+						</div>
+						
 					</div>
 				<?php endwhile; ?>
 			<?php endif ?>
