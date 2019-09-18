@@ -9,13 +9,22 @@
 				<?php while( have_posts() ) : the_post(); ?>
 					<div class="post-preview">
 						<div class="post-image">
-							<?php the_post_thumbnail(); ?>
+							<?php if (has_post_thumbnail()): ?>
+								<?php the_post_thumbnail(); ?>
+							<?php else: ?>
+								<h2><?php the_title(); ?></h2>
+							<?php endif; ?>	
 						</div>
 						<div class="post-description">
 							<h3><?php the_title(); ?></h3>
-
-							<?php the_excerpt(); ?>
-							<a class="read-more" href="<?php echo the_permalink(); ?>">Read More</a>
+								<?php the_excerpt(); ?>
+								<a class="read-more" href="<?php echo the_permalink(); ?>">Read More</a>
+								
+								<?php echo get_the_tag_list(
+									'<div class="tag-list">Tags: <div class="tag">',
+									'</div><div class="tag">',
+									'</div></div>'); 
+								?>
 						</div>
 						
 					</div>
