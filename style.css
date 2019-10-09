@@ -181,9 +181,15 @@ h1, h2, h3, h4, h4 {
 }
 
 /* Images Styles -====================
+ *
+ *  To use these styles add them to the
+ *  'Additional CSS Classes' textbox
+ *  for Wordpress built-in image
+ *  handler. 
+ *
 ====================================*/ 
 
-img.border-1 img {
+.border-1 img {
 	border: 2px solid black;
 }
 
