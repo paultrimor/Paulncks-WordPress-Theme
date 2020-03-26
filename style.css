@@ -39,10 +39,11 @@ html, body { margin: 0px; padding: 0px; height: 100%; }
 
 /* Links and Buttons ================
 ====================================*/
-a {
-	text-decoration-color: #0000ee;
+a, .link {
+	text-decoration-color: #0000ee !important;
+	color: #007bff !important;
 }
-a:hover {
+a:hover, .link:hover {
 	color: black;
 }
 
@@ -66,7 +67,6 @@ a:hover {
 * {
 	font-family: serif;
 }
-
 h1, h2, h3, h4, h5 {
 	font-family: sans-serif;
 }
@@ -191,6 +191,18 @@ h1, h2, h3, h4, h5 {
 
 .border-1 {
 	border: 2px solid black;
+}
+
+/* Bootstrap Modifications ===========
+====================================*/ 
+a.carousel-control-prev, 
+a.carousel-control-next {
+	display: contents !important;
+	color: #007bff !important;
+	opacity: 100 !important;  
+}
+span.carousel-control:hover {
+	text-decoration: underline;
 }
 
 

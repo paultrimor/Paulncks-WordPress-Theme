@@ -12,7 +12,11 @@ function register_menus() {
 
 function paulncks_scripts() {
 	wp_enqueue_style('paulncks-style', get_stylesheet_uri()); 
-	wp_enqueue_script('script', get_template_directory_uri() . '/scripts/functions.js');
+	wp_enqueue_style('bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css');
+
+	wp_enqueue_script('bootstrap-bundle', get_stylesheet_directory_uri().'/scripts/vendor/bootstrap.bundle.min.js', array('jquery'), '', true);
+	wp_enqueue_script('bootstrap', get_stylesheet_directory_uri().'/scripts/vendor/bootstrap.min.js', array('jquery'), '', true);
+	wp_enqueue_script('script', get_stylesheet_directory_uri().'/scripts/functions.js');
 }
 
 add_action('init', 'register_menus');
