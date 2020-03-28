@@ -35,16 +35,14 @@ Menu:
 html, body { margin: 0px; padding: 0px; height: 100%; }
 * { box-sizing: border-box; }
 
-@import 
-
 /* Links and Buttons ================
 ====================================*/
 a, .link {
-	text-decoration-color: #0000ee !important;
 	color: #007bff !important;
 }
-a:hover, .link:hover {
+a:hover, .link{
 	color: black;
+	text-decoration: underline;
 }
 
 /* Custom ScrollBar */ 
@@ -63,7 +61,6 @@ a:hover, .link:hover {
 
 /* Typography =======================
 ===================================*/
-
 * {
 	font-family: serif;
 }
@@ -91,11 +88,11 @@ h1, h2, h3, h4, h5 {
 	flex: 10;
 	margin: 0px; padding: 0px;
 	overflow-y: scroll;
-	overflow-x: 
+	overflow-x: none;
 	overflow-wrap: break-word;
 }
 .site-footer {
-	flex: 1;
+	flex: 0;
 	margin: 0px; padding: 0px;
 	border-top: 2px solid #435360;
 }
@@ -115,7 +112,9 @@ h1, h2, h3, h4, h5 {
 
 /* Menu & Branding ===================
 ====================================*/
-
+#menu-main-container {
+	display: none;
+}
 .menu {
 	display: flex;
 	flex-direction: row;
@@ -152,6 +151,45 @@ h1, h2, h3, h4, h5 {
 	color: white;
 	text-align: center;
 }
+
+/* Hamburger menu icon */ 
+div#menu-main-container.menu-open {
+	display: block;
+	flex-direction: column;
+}
+div#menu-main-container.menu-open .menu {
+	display: flex;
+	flex-direction: column;
+}
+button.menu-btn {
+	float: right;
+	background: none;
+	background-color: #007bff !important;
+	color: white;
+  	border: none;
+  	padding: 1px !important;
+  	position: absolute;
+  	bottom: 10px;
+  	right: 10px;
+  }
+
+/* Hide Branding for More Relestate */ 
+.header-hide {
+	max-height: 0px;
+	overflow: hidden; 
+	-moz-transition: max-height .5s ease;
+	-webkit-transition: max-height .5s ease;
+	-o-transition: max-height .5s ease;
+	transition: max-height .5s ease;
+}
+.header-show {
+	max-height: 300px;
+	-moz-transition: max-height .5s ease;
+	-webkit-transition: max-height .5s ease;
+	-o-transition: max-height .5s ease;
+	transition: max-height .5s ease;
+}
+
 
 /* Post Loop =========================
 ====================================*/
@@ -217,6 +255,15 @@ span.carousel-control:hover {
 		top: 3px; right: 3px;
 		background-color: green;
 		color: white;
+	}
+	#menu-main-container {
+		display: block;
+	}
+	.site-footer {
+		flex: 1;
+	}
+	button.menu-btn {
+		display: none;
 	}
 }
 
