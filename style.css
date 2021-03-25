@@ -62,10 +62,10 @@ a:hover, .link{
 /* Typography =======================
 ===================================*/
 * {
-	font-family: serif;
+	font-family: serif !important;
 }
-h1, h2, h3, h4, h5 {
-	font-family: sans-serif;
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif !important;
 }
 
 /** Mobile-First  * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
