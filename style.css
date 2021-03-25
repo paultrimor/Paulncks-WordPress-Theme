@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around; 
-	list-style: none;
+	list-style: none !important;
 	font-weight: bold;
 	padding: 0px;
 }
@@ -244,6 +244,38 @@ span.carousel-control:hover {
 	text-decoration: underline;
 }
 
+/* Shortcode CSS ====================
+====================================*/ 
+.paulncks-tag-shortcode {
+	list-style: none;
+	padding: 0px;
+	width: 100%;
+	margin: 0px ;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.paulncks-tag-shortcode li {
+	font-size: 0.8em;
+	padding: 0px 3px;
+	margin-bottom: 10px;
+	flex-basis: content;
+}
+/* The Entire tag color set is in Wordpress */
+.tagname-babel { background-color: red; color: white; }
+
+.paulncks-menu-shortcode ul {
+	list-style: none;
+	font-weight: bold;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.paulncks-menu-shortcode li {
+	padding: 0px 3px;
+}
 
 /** iPAD Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
 **********************************************************************/
@@ -363,6 +395,16 @@ span.carousel-control:hover {
 	}
 	.post-preview .post-description h3 {
 		margin-top: 0px;  
+	}
+
+	/* Shortcode CSS ====================
+	====================================*/
+	.paulncks-menu-shortcode ul {
+		list-style: none;
+		font-weight: bold;
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
 	}
 
 }
