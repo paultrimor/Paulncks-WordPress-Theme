@@ -277,6 +277,13 @@ span.carousel-control:hover {
 	padding: 0px 3px;
 }
 
+/* Utility CSS ====================
+====================================*/ 
+.hide-on-mobile {
+	visibility: hidden;
+	display: none;
+}
+
 /** iPAD Adjustments * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
 **********************************************************************/
 
@@ -296,6 +303,10 @@ span.carousel-control:hover {
 	}
 	button.menu-btn {
 		display: none;
+	}
+	.hide-on-mobile {
+		visibility: visible;
+		display: block;
 	}
 }
 
