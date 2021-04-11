@@ -9,8 +9,6 @@
 					));
 				?>	
 
-				<button class="menu-btn" onClick="toggleMenu()">☰ Menu</button>
-
 				<?php get_template_part('template-parts/site-branding'); ?>
 			</div>
 		</footer>

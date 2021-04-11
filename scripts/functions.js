@@ -1,6 +1,6 @@
 /*! 
  * Name: functions.js 
- * Description: Miscellaneous functions
+ * Description: Miscellaneous functions, Mobile Responsivity
 **/ 
 
 // Loads once the page starts
@@ -45,13 +45,11 @@ jQuery('body.mobile #content').scroll(function() {
 
 function openMenu() {
 	jQuery('#menu-main-container')
-		.removeClass('menu-close')
-		.addClass('menu-open');	
+		.addClass('menu-open');
 }
 function closeMenu() {
 	jQuery('#menu-main-container')
-		.removeClass('menu-open')
-		.addClass('menu-close');	
+		.removeClass('menu-open');
 }
 function toggleMenu() {
 	if (!jQuery('#menu-main-container').hasClass('menu-open')) {

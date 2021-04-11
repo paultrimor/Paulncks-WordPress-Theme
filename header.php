@@ -21,6 +21,7 @@
 		<header id="masthead" class="site-header">
 			<div class="header-area">			
 				<?php get_template_part('template-parts/site-branding'); ?>
+				<button class="menu-btn" onClick="toggleMenu()">☰</button>
 			</div>
 			<span class="bloginfo"><?php echo get_bloginfo('description');?></span>
 		</header>

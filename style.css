@@ -102,6 +102,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-area {
 	padding: 5px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .content-area {
 	padding: 5px 10px;
@@ -113,15 +116,18 @@ h1, h2, h3, h4, h5, h6 {
 /* Menu & Branding ===================
 ====================================*/
 #menu-main-container {
+	height: 0px;
 	display: none;
+	transition: height 2s;
+	display: flex;
+	flex-direction: row;
 }
 .menu {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around; 
+	flex-direction: column;
 	list-style: none !important;
 	font-weight: bold;
-	padding: 0px;
+	padding: 5px;
 }
 .header-area > .site-branding {
 	display: flex;
@@ -154,24 +160,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hamburger menu icon */ 
 div#menu-main-container.menu-open {
-	display: block;
-	flex-direction: column;
-}
-div#menu-main-container.menu-open .menu {
-	display: flex;
-	flex-direction: column;
+	height: 100vh;
 }
 button.menu-btn {
-	float: right;
-	background: none;
-	background-color: #007bff !important;
+	background-color: #435360 !important;
 	color: white;
-  	border: none;
-  	padding: 1px !important;
-  	position: absolute;
-  	bottom: 10px;
-  	right: 10px;
-  }
+  	padding: 0px !important;
+	width: 40px;
+	height: 40px;
+}
 
 /* Hide Branding for More Relestate */ 
 .header-hide {
@@ -299,7 +296,11 @@ span.carousel-control:hover {
 		display: block;
 	}
 	.site-footer {
-		flex: 1;
+		flex-basis: 50px;
+	}
+	.menu {
+		flex-direction: row;
+		align-items: center;
 	}
 	button.menu-btn {
 		display: none;
@@ -369,8 +370,9 @@ span.carousel-control:hover {
 		height: 100%;
 	}
 	.menu {
+		text-align: left;
 		flex-direction: column;
-		height: 100%; 
+		align-items: end;
 	}
 	.menu-item {
 		display: block;
