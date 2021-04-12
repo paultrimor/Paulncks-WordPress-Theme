@@ -209,10 +209,18 @@ button.menu-btn {
 	text-align: right;
 }
 .post-preview .tag-list {
-}
-.post-preview .tag {
-	display: inline;
+	margin: 0px;
 	padding: 3px;
+	display: flex;
+	list-style: none;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.tag-list li {
+	font-size: 0.8em;
+	padding: 0px 3px;
+	margin-bottom: 10px;
+	flex-basis: content;
 }
 
 /* Images Styles -====================
@@ -236,6 +244,15 @@ a.carousel-control-next {
 	display: contents !important;
 	color: #007bff !important;
 	opacity: 100 !important;  
+}
+a.carousel-control-prev::before {
+	content: "<";
+}
+a.carousel-control-next::after {
+	content: ">";
+}
+a.carousel-control-prev::after {
+	content: "·";
 }
 span.carousel-control:hover {
 	text-decoration: underline;

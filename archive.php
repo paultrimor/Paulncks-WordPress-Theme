@@ -20,10 +20,12 @@
 								<?php the_excerpt(); ?>
 								<a class="read-more" href="<?php echo the_permalink(); ?>">Read More</a>
 								
-								<?php echo get_the_tag_list(
-									'<div class="tag-list">Tags: <div class="tag">',
-									'</div><div class="tag">',
-									'</div></div>'); 
+								<?php
+									$items = "<ul class='tag-list'>";
+									foreach(get_the_tags($postid) as $tag) {
+										$items .= "<li class='tagname-".$tag->slug."'>".$tag->name."</li>";
+									}
+									echo $items."</ul>";
 								?>
 						</div>
 						
