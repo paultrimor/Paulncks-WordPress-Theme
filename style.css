@@ -335,6 +335,7 @@ span.carousel-control:hover {
 	.mobile-landing-view {
         display: flex;
         height: auto;
+        text-align: left;
 	}
 }
 
@@ -421,6 +422,7 @@ span.carousel-control:hover {
 	.mobile-landing-view {
         display: flex;
         height: auto;
+        text-align: left;
 	}
 
 	/* Post Loop =========================
