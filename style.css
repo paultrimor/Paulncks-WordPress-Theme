@@ -186,6 +186,12 @@ button.menu-btn {
 	-o-transition: max-height .5s ease;
 	transition: max-height .5s ease;
 }
+.mobile-landing-view {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+}
 
 
 /* Post Loop =========================
@@ -326,6 +332,10 @@ span.carousel-control:hover {
 		visibility: visible;
 		display: block;
 	}
+	.mobile-landing-view {
+        display: flex;
+        height: auto;
+	}
 }
 
 
@@ -407,6 +417,10 @@ span.carousel-control:hover {
 	}
 	.custom-logo h1 {
 		margin: 0px;
+	}
+	.mobile-landing-view {
+        display: flex;
+        height: auto;
 	}
 
 	/* Post Loop =========================
